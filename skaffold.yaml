@@ -1,0 +1,26 @@
+build:
+  artifacts:
+  - image: your-docker-registry/frontend
+    context: frontend
+    docker:
+      dockerfile: Dockerfile
+    sync:
+      manual:
+        - src: 'src/**/*.ts*'
+          dest: .
+  - image: your-docker-registry/auth-service
+    context: backend/auth-service
+    docker:
+      dockerfile: Dockerfile
+    sync:
+      manual:
+        - src: 'src/**/*.ts'
+          dest: .
+  - image: your-docker-registry/api-gateway
+    context: backend/api-gateway
+    docker:
+      dockerfile: Dockerfile
+    sync:
+      manual:
+        - src: 'src/**/*.ts'
+          dest: .

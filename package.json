@@ -1,0 +1,40 @@
+{
+    "name": "task-management-app",
+    "version": "1.0.0",
+    "description": "A microservices-based task management application",
+    "scripts": {
+      "install:all": "npm run install:frontend && npm run install:auth && npm run install:task && npm run install:gateway",
+      "install:frontend": "cd frontend && npm install",
+      "install:auth": "cd backend/auth-service && npm install",
+      "install:task": "cd backend/task-service && npm install",
+      "install:gateway": "cd backend/api-gateway && npm install",
+      "start:dev": "skaffold dev",
+      "build": "skaffold build",
+      "deploy": "skaffold run",
+      "test": "npm run test:frontend && npm run test:auth && npm run test:task && npm run test:gateway",
+      "test:frontend": "cd frontend && npm test",
+      "test:auth": "cd backend/auth-service && npm test",
+      "test:task": "cd backend/task-service && npm test",
+      "test:gateway": "cd backend/api-gateway && npm test",
+      "lint": "npm run lint:frontend && npm run lint:auth && npm run lint:task && npm run lint:gateway",
+      "lint:frontend": "cd frontend && npm run lint",
+      "lint:auth": "cd backend/auth-service && npm run lint",
+      "lint:task": "cd backend/task-service && npm run lint",
+      "lint:gateway": "cd backend/api-gateway && npm run lint"
+    },
+    "keywords": [
+      "microservices",
+      "kubernetes",
+      "react-native",
+      "nodejs",
+      "typescript"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "devDependencies": {
+      "concurrently": "^6.2.0"
+    },
+    "engines": {
+      "node": ">=14.0.0"
+    }
+  }

@@ -1,0 +1,43 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# React Native
+.expo/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Kubernetes
+kubeconfig
+
+# Skaffold
+.skaffold/
+
+# Build outputs
+build/
+dist/
+
+# Logs
+*.log
+
+# Docker
+.docker/
